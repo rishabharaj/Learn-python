@@ -1,0 +1,11 @@
+from functools import cache
+
+@cache
+def fib(n):
+    if n < 2:
+        return n
+    return fib(n - 1) + fib(n - 2)
+
+fib(30)  # fast, thanks to caching
+# isme wrape kr diya hai function ko and input for keys and return for values
+# agar input same hoto isme cache se hi return ho jata hai
